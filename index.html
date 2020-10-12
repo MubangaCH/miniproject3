@@ -30,42 +30,64 @@
           <div class="ob-value" id="weight">undefined</div>
         </div>
         <div class="small-card">
-          <div>Systolic Blood Pressure</div>
-          <div class="ob-value" id="sys">undefined</div>
+          <div>Sodium</div>
+          <div class="ob-value" id="sodium">undefined</div>
         </div>
         <div class="small-card">
-          <div>Diastolic Blood Pressure</div>
-          <div class="ob-value" id="dia">undefined</div>
+          <div></div>
+          <p>Add desired sodium levels</p>
+          <div class="ob-value" id="desiredsodium"></div>
+          <span>  <input class="annotation-box" id="annotation">
+          <button class="annotation-button" id="add">Add</button></span>
         </div>
-        <div class="small-card">
-          <div>LDL</div>
-          <div class="ob-value" id="ldl">undefined</div>
-        </div>
-        <div class="small-card">
-          <div>HDL</div>
-          <div class="ob-value" id="hdl">undefined</div>
-        </div>
+
       </div>
 
       <div class="big-card">
         <div class="card">
           <div class="title">
-            Add an Annotation for the Weight Observation
+            Hypernatremia
+            <p>Total water deficit = </p>
           </div>
-        <span>  <input class="annotation-box" id="annotation">
-          <button class="annotation-button" id="add">Add</button></span>
-          <div class="annotations">
-          Latest Annotation
-          <li id="note">No annotations</li>
+          <div class="ob-value" id="defWater">undefined</div>
+        </div>
+
+
+        <div class="card">
+          <div class="title">
+            Hyponatremia
+            <p>Sodium requirement = </p>
           </div>
+          <div class="ob-value" id="nareq">undefined</div>
         </div>
 
         <div class="card">
           <div class="title">
-            Medication Requests
+
+            <button class="diagnosis-button" id="diagButton">See Diagnosis</button></span>
+
+            <li id="hyper">No diagnosis</li>
+
           </div>
-          <ul id="med_list"></ul>
+          <ul id="diag"></ul>
         </div>
+
+        <div class="card">
+          <div class="title">
+            Notes
+            <ul>
+              <li>Total body water = 0.5 * body weight </li>
+              <li>Total water deficit = total body water * (1 -desired Na+/serum Na+) </li>
+              <li>Sodium requirement = total body water * (desired Na+ - serum Na+) </li>
+              <li>Desired sodium requirement used : 140 mEq/L</li>
+
+            </ul>
+
+
+          </div>
+          <ul id="notes"></ul>
+        </div>
+
       </div>
 
     </main>
